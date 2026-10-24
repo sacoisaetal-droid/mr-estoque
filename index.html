@@ -125,11 +125,11 @@
       startButton.disabled = false;
       const name = error && error.name ? error.name : '';
       if (name === 'NotAllowedError' || name === 'PermissionDeniedError') {
-        status.textContent = 'Permissão da câmera negada. No Chrome, toque no ícone ao lado do endereço do site > Permissões > Câmera > Permitir e recarregue a página.';
+        status.textContent = 'Permissão da câmera negada. No Chrome do celular, toque no ícone de configurações/cadeado ao lado do endereço do site > Permissões > Câmera > Permitir e recarregue a página.';
       } else if (name === 'NotFoundError' || name === 'DevicesNotFoundError') {
-        status.textContent = 'Nenhuma câmera foi encontrada neste aparelho.';
+        status.textContent = 'Nenhuma câmera traseira foi encontrada neste aparelho.';
       } else {
-        status.textContent = 'Não foi possível iniciar o leitor: ' + (error && error.message ? error.message : String(error)) + '\nConfira a permissão da câmera e tente novamente.';
+        status.textContent = 'Não foi possível iniciar o leitor: ' + (error && error.message ? error.message : String(error)) + '\nVerifique se o navegador tem permissão para usar a câmera nas configurações do celular.';
       }
     }
   }
